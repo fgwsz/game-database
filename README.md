@@ -67,3 +67,33 @@ sudo mv /var/lib/dpkg/info.bak /var/lib/dpkg/info
 ```bash
 ./run-nds.sh
 ```
+## 上传游戏`ROM`时的注意事项
+游戏`ROM`的文件名(`[filename]`)一律使用英文.  
+将游戏`ROM`文件使用如下方式进行极致压缩:  
+```bash
+7z a -mx=9 [filename].7z [input path]
+```
+其中`[input path]`是游戏`ROM`(`.gba`/`.nds`)的文件路径.  
+`[filename].7z`是要输出的游戏`ROM`压缩包.  
+注意:上述操作中的`7z`命令可能需要安装才能使用,  
+输入如下命令进行安装:  
+```bash
+sudo apt-get install p7zip-full
+```
+压缩完成之后,  
+将压缩好的游戏`ROM`压缩包根据游戏发售平台的不同,  
+放到对应的平台文件夹下:  
+&emsp;&emsp;`GBA`游戏的游戏`ROM`压缩包存放在`GBA/`文件夹下,  
+&emsp;&emsp;`NDS`游戏的游戏`ROM`压缩包存放在`NDS/`文件夹下.  
+然后使用如下命令进行提交:  
+```bash
+./git-push.sh
+```
+遵循上述规则的原因:  
+1. `github`免费仓库支持的容量上限为`1GB`  
+2. `github`免费仓库支持上传的单个文件体积最大为`100MB`  
+3. 游戏存档默认会生成在游戏`ROM`压缩包的同一目录下,  
+而且文件名和游戏`ROM`压缩包一致,  
+使用英文可以避免因操作系统编码和文件编码不一致而
+造成文件名乱码以及存档加载异常等问题  
+
