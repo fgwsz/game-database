@@ -5,7 +5,8 @@ echo "You Can Input q For Abort."
 read -p "Input Git Commit Info: " commit_info
 if [ "$commit_info" != "q" ]; then
     cd "$root_path"
-    git add .
+    git status
+    git add -A
     git commit -m "$commit_info"
-    git push
+    git push --force
 fi

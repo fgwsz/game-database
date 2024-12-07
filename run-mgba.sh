@@ -5,6 +5,7 @@ cd "$root_path"
 git fetch origin
 git reset --hard origin/main
 mgba-qt
-git add .
+git status
+git add -A
 git commit -m "Push game sav."
-git push
+git push --force
