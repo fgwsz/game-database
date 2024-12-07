@@ -59,3 +59,11 @@ sudo mv /var/lib/dpkg/info.bak /var/lib/dpkg/info
 ```bash
 ~/Downloads/melonDS/build/melonDS
 ```
+## 运行`GBA`模拟器并自动同步游戏`ROM`和游戏存档
+```bash
+./run-gba.sh
+```
+## 运行`NDS`模拟器并自动同步游戏`ROM`和游戏存档
+```bash
+./run-nds.sh
+```
