@@ -22,7 +22,7 @@
 mgba-qt
 ```
 ## 安装`NDS`模拟器`melonDS`
-安装并生成执行文件:  
+安装并生成可执行文件:  
 ```bash
 sudo apt install cmake extra-cmake-modules libcurl4-gnutls-dev libpcap0.8-dev libsdl2-dev libarchive-dev libenet-dev libzstd-dev
 sudo apt install qt6-base-dev
@@ -96,4 +96,3 @@ sudo apt-get install p7zip-full
 而且文件名和游戏`ROM`压缩包一致,  
 使用英文可以避免因操作系统编码和文件编码不一致而
 造成文件名乱码以及存档加载异常等问题  
-
