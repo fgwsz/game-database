@@ -3,8 +3,13 @@ sudo apt install qt6-base-dev
 sudo apt install qt6-base-private-dev
 sudo apt install qt6-multimedia-dev
 sudo apt install libqt6svg6-dev
+sudo apt install libfaad-dev
 cd ~/Downloads
 git clone https://github.com/melonDS-emu/melonDS
 cd melonDS
 cmake -B build
 cmake --build build -j$(nproc --all)
+
+# Ubuntu/Debian
+sudo apt update
+sudo apt install libvulkan-dev vulkan-utils
