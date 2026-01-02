@@ -1,5 +1,5 @@
 # game-database
-一个简易的`GBA&NDS`游戏`ROM`和游戏存档云端仓库.  
+一个简易的`FC & GBA & NDS`游戏`ROM`和游戏存档云端仓库.  
 (适用于`Ubuntu 22.04`操作系统)  
 ## 安装`FC`模拟器`fceux`
 ### 手动安装
