@@ -1,3 +1,6 @@
+#!/bin/bash
+
+sudo apt update
 sudo apt install cmake extra-cmake-modules libcurl4-gnutls-dev libpcap0.8-dev libsdl2-dev libarchive-dev libenet-dev libzstd-dev
 sudo apt install qt6-base-dev
 sudo apt install qt6-base-private-dev

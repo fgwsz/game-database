@@ -1,6 +1,21 @@
 # game-database
 一个简易的`GBA&NDS`游戏`ROM`和游戏存档云端仓库.  
 (适用于`Ubuntu 22.04`操作系统)  
+## 安装`FC`模拟器`fceux`
+### 手动安装
+可以使用如下的命令进行安装:  
+```bash
+sudo apt update
+sudo apt install fceux
+```
+由于存档同步功能需要用到`rsync`,所以也需要安装`rsync`.  
+```bash
+sudo apt install rsync
+```
+### 脚本安装
+```bash
+./install-fceux.sh
+```
 ## 安装`GBA`模拟器`mGBA`
 ### 安装方式一:官网下载安装
 `mGBA`模拟器官网下载地址:<https://mgba.io/downloads.html>  
@@ -27,6 +42,7 @@ sudo apt install mgba-qt
 mgba-qt
 ```
 ## 安装`NDS`模拟器`melonDS`
+### 手动安装
 安装并生成可执行文件:  
 ```bash
 sudo apt install cmake extra-cmake-modules libcurl4-gnutls-dev libpcap0.8-dev libsdl2-dev libarchive-dev libenet-dev libzstd-dev
@@ -42,7 +58,7 @@ cd melonDS
 cmake -B build
 cmake --build build -j$(nproc --all)
 ```
-### 解决`dpkg`错误
+#### 解决`dpkg`错误
 如果在上述使用`sudo apt install`的时候出现如下错误:  
 ```bash
 dpkg: error processing package shim-signed (--configure):
@@ -65,6 +81,14 @@ sudo mv /var/lib/dpkg/info.bak /var/lib/dpkg/info
 运行`melonDS`模拟器:  
 ```bash
 ~/Downloads/melonDS/build/melonDS
+```
+### 脚本安装
+```bash
+./install-melonDS.sh
+```
+## 运行`FC`模拟器并自动同步游戏`ROM`和游戏存档
+```bash
+./run-fc.sh
 ```
 ## 运行`GBA`模拟器并自动同步游戏`ROM`和游戏存档
 ```bash
