@@ -16,6 +16,11 @@ sudo apt install rsync
 ```bash
 ./install-fceux.sh
 ```
+### 运行`fceux`
+安装完毕之后,使用如下命令运行.  
+```bash
+fceux
+```
 ## 安装`GBA`模拟器`mGBA`
 ### 安装方式一:官网下载安装
 `mGBA`模拟器官网下载地址:<https://mgba.io/downloads.html>  
@@ -99,6 +104,8 @@ sudo mv /var/lib/dpkg/info.bak /var/lib/dpkg/info
 ./run-nds.sh
 ```
 ## 上传游戏`ROM`时的注意事项
+`FC`模拟器无法打开`FC`游戏`ROM`压缩包,所以不压缩.  
+针对于非`FC`游戏`ROM`请遵循如下规则:  
 游戏`ROM`的文件名(`[filename]`)一律使用英文.  
 将游戏`ROM`文件使用如下方式进行极致压缩:  
 ```bash
@@ -114,6 +121,7 @@ sudo apt-get install p7zip-full
 压缩完成之后,  
 将压缩好的游戏`ROM`压缩包根据游戏发售平台的不同,  
 放到对应的平台文件夹下:  
+&emsp;&emsp;`FC`游戏的游戏`ROM`存放在`FC/`文件夹下,  
 &emsp;&emsp;`GBA`游戏的游戏`ROM`压缩包存放在`GBA/`文件夹下,  
 &emsp;&emsp;`NDS`游戏的游戏`ROM`压缩包存放在`NDS/`文件夹下.  
 然后使用如下命令进行提交:  
